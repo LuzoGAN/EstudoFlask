@@ -1,0 +1,18 @@
+<h1> {{ titulo }} </h1>
+<h2>'Luzo Gomes'</h2>
+
+<tr>
+    <th>Nome</th>
+    <th>Categoria</th>
+    <th>Console</th>
+</tr>
+
+<tbody>
+{% for jogo in jogos %}
+    <tr>
+        <td>{{ jogo.nome }}</td>
+        <td>{{ jogo.categoria }}</td>
+        <td>{{ jogo.console }}</td>
+    </tr>
+    {% endfor %}
+</tbody>

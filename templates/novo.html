@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de cadastro de jogos</title>
+</head>
+<body>
+	<h1>Cadastro de jogos</h1>
+	<form action="/criar" method="POST">
+		<label for="nome">Nome do jogo:</label>
+		<input type="text" name="nome" id="nome"><br>
+
+		<label for="categoria">Categoria:</label>
+		<select name="categoria" id="categoria">
+			<option value="">Selecione</option>
+			<option value="ação">Ação</option>
+			<option value="aventura">Aventura</option>
+			<option value="esporte">Esporte</option>
+			<option value="estratégia">Estratégia</option>
+			<option value="simulação">Simulação</option>
+		</select><br>
+
+		<label for="console">Console:</label>
+		<input type="text" name="console" id="console"><br>
+
+		<input type="submit" value="Enviar">
+	</form>
+</body>
+</html>

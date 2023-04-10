@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -28,6 +28,17 @@ def criar():
     console = request.form['console']
     jogo =Jogo(nome, categoria, console)
     lista.append(jogo)
-    return render_template('lista.html', titulo='Jogo', jogos=lista)
+    return redirect('/')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/autenticar', methods=['POST',])
+def autenticar():
+    if 'mestra' == request.form['password']:
+        return redirect('/')
+    else:
+        return  redirect('/login')
 
 app.run(debug=True)

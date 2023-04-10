@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Formulário de cadastro de jogos</title>
-</head>
-<body>
+{% extends "template.html" %}
+{% block conteudo %}
 	<h1>Cadastro de jogos</h1>
 	<form action="/criar" method="POST">
 		<label for="nome">Nome do jogo:</label>
@@ -24,5 +20,4 @@
 
 		<input type="submit" value="Enviar">
 	</form>
-</body>
-</html>
+{% endblock %}

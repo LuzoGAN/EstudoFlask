@@ -1,6 +1,7 @@
 <h1> {{ titulo }} </h1>
 <h2>'Luzo Gomes'</h2>
-
+{% extends "template.html" %}
+{% block conteudo %}
 <tr>
     <th>Nome</th>
     <th>Categoria</th>
@@ -16,3 +17,4 @@
     </tr>
     {% endfor %}
 </tbody>
+{% endblock %}

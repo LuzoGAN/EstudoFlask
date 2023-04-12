@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport", content="width=device-width">
+
+    {% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul idd="'messages" class="'list-unstyled">
+				{% for message in messages %}
+					<li class="alert alert-success">{{ message }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+
     <title>Jogos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
 </head>
